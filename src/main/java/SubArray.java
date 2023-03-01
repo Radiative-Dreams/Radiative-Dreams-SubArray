@@ -1,7 +1,7 @@
 
 public class SubArray {
     /**
-     * Return only a part of an array. For instance, given the array {1,2,3,4,5}, a sub array with start 1 and end 4
+     * Return only a part of an array. For instance, given the array {1,2,3,4,5}, a sub array with start index of 1 and end index of 4
      * would result in {2,3,4}, because the starting index is inclusive, but the ending index is exclusive.
      *
      * You will need to create a new array whose size is only the amound of elements requested between the start and
@@ -13,6 +13,12 @@ public class SubArray {
      * @return a sub-array of nums containing the values between start and end.
      */
     public int[] sub(int[] nums, int start, int end){
-        return null;
+        // size = end - start
+        int[] arr = new int[end-start];
+        for(int i = start, j = 0; i < end; i++, j++)
+        {
+            arr[j] = nums[i];
+        }
+        return arr;
     }
 }
